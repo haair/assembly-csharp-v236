@@ -1,4 +1,5 @@
 using System;
+using Assets.src.e;
 using Assets.src.g;
 using Haair;
 using Haair.Boss;
@@ -6078,9 +6079,10 @@ public class GameScr : mScreen, IChatable
 					if ((i == selectedIndexSkill && !isPaintUI() && GameCanvas.gameTick % 10 > 5) || i == keyTouchSkill)
 					{
 						g.drawImage(ItemMap.imageFlare, xSkill + xS[i] + 13, yS[i] + 14, 3);
-					}
+                    }
+                HGraphic.PaintSkillCooldown(skill, xSkill, xS[i], yS[i], g);
 				}
-			}
+            }
 			paintGamePad(g);
 		}
 	}
