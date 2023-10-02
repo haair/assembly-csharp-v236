@@ -566,26 +566,26 @@ public class BackgroudEffect
 
 	public void paintWater(mGraphics g)
 	{
-		if (typeEff != 10)
-		{
-			return;
-		}
-		g.setColor(colorWater);
-		for (int i = 0; i < num; i++)
-		{
-			g.drawImage((i >= num / 2) ? water1 : water2, x[i], y[i] + yWater, 0);
-		}
-		if (id_water1 != 0 && water3 == null)
-		{
-			water3 = SmallImage.imgNew[id_water1].img;
-		}
-		if (water3 != null)
-		{
-			for (int j = 0; j < num / 2; j++)
-			{
-				g.drawImage(water3, x[j], y[j] + yWater, 0);
-			}
-		}
+		//if (typeEff != 10)
+		//{
+		//	return;
+		//}
+		//g.setColor(colorWater);
+		//for (int i = 0; i < num; i++)
+		//{
+		//	g.drawImage((i >= num / 2) ? water1 : water2, x[i], y[i] + yWater, 0);
+		//}
+		//if (id_water1 != 0 && water3 == null)
+		//{
+		//	water3 = SmallImage.imgNew[id_water1].img;
+		//}
+		//if (water3 != null)
+		//{
+		//	for (int j = 0; j < num / 2; j++)
+		//	{
+		//		g.drawImage(water3, x[j], y[j] + yWater, 0);
+		//	}
+		//}
 	}
 
 	public void paintFar(mGraphics g)
