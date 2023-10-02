@@ -4869,40 +4869,40 @@ public class GameScr : mScreen, IChatable
 			return;
 		}
 		GameCanvas.debug("PA1", 1);
-        if (isFreez || (isUseFreez && ChatPopup.currChatPopup == null))
-		{
-			dem++;
-			if ((dem < 30 && dem >= 0 && GameCanvas.gameTick % 4 == 0) || (dem >= 30 && dem <= 50 && GameCanvas.gameTick % 3 == 0) || dem > 50)
-			{
-				g.setColor(16777215);
-				g.fillRect(0, 0, GameCanvas.w, GameCanvas.h);
-				if (dem <= 50)
-				{
-					return;
-				}
-				if (isUseFreez)
-				{
-					isUseFreez = false;
-					dem = 0;
-					if (activeRongThan)
-					{
-						callRongThan(xR, yR);
-					}
-					else
-					{
-						hideRongThan();
-					}
-				}
-				paintInfoBar(g);
-				g.translate(-cmx, -cmy);
-				g.translate(0, GameCanvas.transY);
-				Char.myCharz().paint(g);
-				mSystem.paintFlyText(g);
-				resetTranslate(g);
-				paintSelectedSkill(g);
-				return;
-			}
-		}
+  //      if (isFreez || (isUseFreez && ChatPopup.currChatPopup == null))
+		//{
+		//	dem++;
+		//	if ((dem < 30 && dem >= 0 && GameCanvas.gameTick % 4 == 0) || (dem >= 30 && dem <= 50 && GameCanvas.gameTick % 3 == 0) || dem > 50)
+		//	{
+		//		//g.setColor(16777215);
+		//		//g.fillRect(0, 0, GameCanvas.w, GameCanvas.h);
+		//		if (dem <= 50)
+		//		{
+		//			return;
+		//		}
+		//		if (isUseFreez)
+		//		{
+		//			isUseFreez = false;
+		//			dem = 0;
+		//			if (activeRongThan)
+		//			{
+		//				callRongThan(xR, yR);
+		//			}
+		//			else
+		//			{
+		//				hideRongThan();
+		//			}
+		//		}
+		//		paintInfoBar(g);
+		//		g.translate(-cmx, -cmy);
+		//		g.translate(0, GameCanvas.transY);
+		//		Char.myCharz().paint(g);
+		//		//mSystem.paintFlyText(g);
+		//		resetTranslate(g);
+		//		paintSelectedSkill(g);
+		//		return;
+		//	}
+		//}
 		GameCanvas.debug("PA2", 1);
 		GameCanvas.paintBGGameScr(g);
 		paint_ios_bg(g);
