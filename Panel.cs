@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Assets.src.g;
+using Haair;
 using UnityEngine;
 
 public class Panel : IActionListener, IChatable
@@ -7545,6 +7546,7 @@ public class Panel : IActionListener, IChatable
 			}
 			MyVector myVector = new MyVector(string.Empty);
 			myVector.addElement(new Command(mResources.CHAR_ORDER[0], this, 9999, (TopInfo)vTop.elementAt(selected)));
+			HMenu.gI().TienIchTop(myVector, vTop.elementAt(selected) as TopInfo);
 			GameCanvas.menu.startAt(myVector, X, (selected + 1) * ITEM_HEIGHT - cmy + yScroll);
 			addThachDauDetail((TopInfo)vTop.elementAt(selected));
 		}
@@ -8363,6 +8365,7 @@ public class Panel : IActionListener, IChatable
 			currInfoItem = selected;
 			myVector.addElement(new Command(mResources.REVENGE, this, 10000, (InfoItem)vEnemy.elementAt(currInfoItem)));
 			myVector.addElement(new Command(mResources.DELETE, this, 10001, (InfoItem)vEnemy.elementAt(currInfoItem)));
+			HMenu.gI().TienIchEnemy(myVector, vEnemy.elementAt(currInfoItem) as InfoItem);
 			GameCanvas.menu.startAt(myVector, X, (selected + 1) * ITEM_HEIGHT - cmy + yScroll);
 			addFriend((InfoItem)vEnemy.elementAt(selected));
 		}
@@ -8580,6 +8583,10 @@ public class Panel : IActionListener, IChatable
 				if (currMem != null)
 				{
 					MyVector myVector4 = new MyVector();
+					if (currMem.ID != Char.myCharz().charID)
+					{
+                        HMenu.gI().TienIchClanMem(myVector4, currMem);
+                    }
 					Res.outz("TOI DAY 2");
 					if (member != null)
 					{
@@ -8631,8 +8638,12 @@ public class Panel : IActionListener, IChatable
 					if (currMess.type == 0)
 					{
 						MyVector myVector5 = new MyVector();
-						myVector5.addElement(new Command(mResources.CLOSE, this, 8000, currMess));
-						GameCanvas.menu.startAt(myVector5, X, (selected + 1) * ITEM_HEIGHT - cmy + yScroll);
+                        if (currMess.playerId != Char.myCharz().charID)
+                        {
+                            HMenu.gI().TienIchClanMess(myVector5, currMem);
+                        }
+                        myVector5.addElement(new Command(mResources.CLOSE, this, 8000, currMess));
+                        GameCanvas.menu.startAt(myVector5, X, (selected + 1) * ITEM_HEIGHT - cmy + yScroll);
 						addMessageDetail(currMess);
 					}
 					else if (currMess.type == 1)
