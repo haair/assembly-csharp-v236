@@ -516,17 +516,17 @@ public class BackgroudEffect
 
 	public static void paintFog(mGraphics g)
 	{
-		if (mSystem.clientType == 1 || GameCanvas.lowGraphic || !isFog || imgFog == null)
-		{
-			return;
-		}
-		for (int i = xfog; i < TileMap.pxw; i += fogw)
-		{
-			if (i >= GameScr.cmx - fogw)
-			{
-				g.drawImageFog(imgFog, i, yfog, 0);
-			}
-		}
+		//if (mSystem.clientType == 1 || GameCanvas.lowGraphic || !isFog || imgFog == null)
+		//{
+		//	return;
+		//}
+		////for (int i = xfog; i < TileMap.pxw; i += fogw)
+		////{
+		////	if (i >= GameScr.cmx - fogw)
+		////	{
+		////		g.drawImageFog(imgFog, i, yfog, 0);
+		////	}
+		////}
 	}
 
 	private void reloadShip()
