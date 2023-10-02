@@ -5877,7 +5877,7 @@ public class Panel : IActionListener, IChatable
 						}
 					}
 				}
-				mFont2.drawString(g, itemInvenNew.template.name + text, xScroll + 5, num14 + 1, 0);
+                mFont2.drawString(g, itemInvenNew.template.name + text, xScroll + 5, num14 + 1, 0);
 				string text2 = string.Empty;
 				if (itemInvenNew.itemOption != null)
 				{
@@ -6020,7 +6020,8 @@ public class Panel : IActionListener, IChatable
 					}
 				}
 				mFont4.drawString(g, "[" + item3.template.id + "] " + item3.template.name + text3, num23 + 5, num24 + 1, 0);
-				string text4 = string.Empty;
+                HGraphic.PaintStarInventory(g, item3, xScroll + 3, num27);
+                string text4 = string.Empty;
 				if (item3.itemOption != null)
 				{
 					if (item3.itemOption.Length > 0 && item3.itemOption[0] != null && item3.itemOption[0].optionTemplate.id != 102 && item3.itemOption[0].optionTemplate.id != 107)
