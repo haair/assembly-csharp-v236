@@ -4963,8 +4963,9 @@ public class Panel : IActionListener, IChatable
 						}
 					}
 				}
-				mFont2.drawString(g, item.template.name + text, num2 + 5, num3 + 1, 0);
-				string text2 = string.Empty;
+				mFont2.drawString(g, "[" + item.template.id + "] " + item.template.name + text, num2 + 5, num3 + 1, 0);
+                HGraphic.PaintStarInventory(g, item, xScroll + 3, num6 - 1);
+                string text2 = string.Empty;
 				if (item.itemOption != null)
 				{
 					if (item.itemOption.Length > 0 && item.itemOption[0] != null)
