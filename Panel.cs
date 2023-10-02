@@ -4456,7 +4456,7 @@ public class Panel : IActionListener, IChatable
 						}
 					}
 				}
-				mFont2.drawString(g, item.template.name + text, num3 + 5, num4 + 1, 0);
+				mFont2.drawString(g, "[" + item.template.id + "] " + item.template.name + text, num3 + 5, num4 + 1, 0);
 				string text2 = string.Empty;
 				if (item.itemOption != null)
 				{
@@ -6018,7 +6018,7 @@ public class Panel : IActionListener, IChatable
 						}
 					}
 				}
-				mFont4.drawString(g, item3.template.name + text3, num23 + 5, num24 + 1, 0);
+				mFont4.drawString(g, "[" + item3.template.id + "] " + item3.template.name + text3, num23 + 5, num24 + 1, 0);
 				string text4 = string.Empty;
 				if (item3.itemOption != null)
 				{
