@@ -1,0 +1,8 @@
+C:\Users\HAAIR\Documents\ModNRO\NROv236\bin\Debug\net35\Assembly-CSharp.dll
+C:\Users\HAAIR\Documents\ModNRO\NROv236\bin\Debug\net35\UnityEngine.dll
+C:\Users\HAAIR\Documents\ModNRO\NROv236\obj\Debug\net35\Assembly-CSharp.csproj.AssemblyReference.cache
+C:\Users\HAAIR\Documents\ModNRO\NROv236\obj\Debug\net35\Assembly-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HAAIR\Documents\ModNRO\NROv236\obj\Debug\net35\Assembly-CSharp.csproj.CoreCompileInputs.cache
+C:\Users\HAAIR\Documents\ModNRO\NROv236\obj\Debug\net35\Assembly-CSharp.csproj.CopyComplete
+C:\Users\HAAIR\Documents\ModNRO\NROv236\obj\Debug\net35\Assembly-CSharp.dll
+C:\Users\HAAIR\Documents\ModNRO\NROv236\bin\Debug\net35\Haair.dll
