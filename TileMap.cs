@@ -1,3 +1,4 @@
+using Haair;
 using System;
 
 public class TileMap
@@ -552,6 +553,10 @@ public class TileMap
 		for (int i = 0; i < GameScr.vItemMap.size(); i++)
 		{
 			((ItemMap)GameScr.vItemMap.elementAt(i)).paintAuraItemEff(g);
+		}
+		if (HGraphic.isXoaDiaHinh)
+		{
+			return;
 		}
 		for (int j = GameScr.gssx; j < GameScr.gssxe; j++)
 		{
