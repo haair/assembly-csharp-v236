@@ -1396,8 +1396,6 @@ public class GameScr : mScreen, IChatable
             myVector.addElement(new Command(menu[i], 11057, npc));
         }
         GameCanvas.menu.startAt(myVector, 2);
-        string[] menu2 = TranslateHelper.TranslateMenuNPC(menu);
-        GameScr.info1.addInfo(menu2[0], 0);
     }
 
     public void readPart()
