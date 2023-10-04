@@ -2536,6 +2536,8 @@ public class GameScr : mScreen, IChatable
 
     public override void updateKey()
     {
+        HGraphic.UpdateCharInMapCommand();
+
         if (Controller.isStopReadMessage || Char.myCharz().isTeleport || Char.myCharz().isPaintNewSkill || InfoDlg.isLock)
         {
             return;
