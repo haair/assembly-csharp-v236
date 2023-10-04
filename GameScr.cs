@@ -7047,7 +7047,7 @@ public class GameScr : mScreen, IChatable
 
     public void chatVip(string chatVip)
     {
-        BossNotification.AddBossNotification(chatVip);
+        BossNotification.GetBossNotification(chatVip);
         if (!startChat)
         {
             currChatWidth = mFont.tahoma_7b_yellowSmall.getWidth(chatVip);
