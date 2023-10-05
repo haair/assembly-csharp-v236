@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Assembly-CSharp</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -23,4 +23,7 @@
       <HintPath>..\Dragon ball_236\Dragon ball_236_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy &quot;$(TargetPath)&quot; &quot;$(SolutionDir)Dragon ball_236\Dragon ball_236_Data\Managed\&quot;" />
+  </Target>
 </Project>
