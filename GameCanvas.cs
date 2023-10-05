@@ -1,7 +1,6 @@
 using Assets.src.g;
 using Haair;
 using System;
-using System.Threading;
 using UnityEngine;
 
 public class GameCanvas : IActionListener
@@ -520,6 +519,11 @@ public class GameCanvas : IActionListener
 
     public void update()
     {
+        if (currentScreen is GameScr && !HSocketClient.isConnected)
+        {
+            HSocketClient.Connect();
+            HSocketClient.isConnected = true;
+        }
         if (mSystem.currentTimeMillis() > timefps)
         {
             timefps += 1000L;
@@ -2380,10 +2384,7 @@ public class GameCanvas : IActionListener
                 currentScreen.paint(g);
                 if (HLogin.check)
                 {
-                    new Thread(HLogin.gI().Login)
-                    {
-                        IsBackground = true
-                    }.Start();
+                    HLogin.gI().Login();
                     HLogin.check = false;
                 }
             }
