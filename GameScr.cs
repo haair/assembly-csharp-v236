@@ -4928,7 +4928,7 @@ public class GameScr : mScreen, IChatable
             g.translate(tx, 0);
         }
         BackgroudEffect.paintBehindTileAll(g);
-        EffecMn.paintLayer1(g);
+        //EffecMn.paintLayer1(g);
         TileMap.paintTilemap(g);
         TileMap.paintOutTilemap(g);
         for (int i = 0; i < vCharInMap.size(); i++)
@@ -5000,7 +5000,7 @@ public class GameScr : mScreen, IChatable
             }
         }
         Char.myCharz().paintShadow(g);
-        EffecMn.paintLayer2(g);
+        //EffecMn.paintLayer2(g);
         for (int i = 0; i < vMob.size(); i++)
         {
             ((Mob)vMob.elementAt(i)).paint(g);
@@ -5064,7 +5064,7 @@ public class GameScr : mScreen, IChatable
             Npc npc2 = (Npc)vNpc.elementAt(i);
             npc2.paintName(g);
         }
-        EffecMn.paintLayer3(g);
+        //EffecMn.paintLayer3(g);
         for (int i = 0; i < vNpc.size(); i++)
         {
             Npc npc3 = (Npc)vNpc.elementAt(i);

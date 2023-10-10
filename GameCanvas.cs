@@ -2477,7 +2477,7 @@ public class GameCanvas : IActionListener
             }
             debug("PE", 1);
             resetTrans(g);
-            EffecMn.paintLayer4(g);
+            //EffecMn.paintLayer4(g);
             if (open3Hour && !isLoading)
             {
                 if (currentScreen == loginScr || currentScreen == serverScreen || currentScreen == serverScr)
