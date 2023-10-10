@@ -998,11 +998,11 @@ public class BackgroudEffect
 
     public static void addEffect(int id)
     {
-        if (!GameCanvas.lowGraphic)
-        {
-            BackgroudEffect o = new BackgroudEffect(id);
-            vBgEffect.addElement(o);
-        }
+        //if (!GameCanvas.lowGraphic)
+        //{
+        //    BackgroudEffect o = new BackgroudEffect(id);
+        //    vBgEffect.addElement(o);
+        //}
     }
 
     public static void addWater(int color, int yWater)
