@@ -7927,6 +7927,10 @@ public class Panel : IActionListener, IChatable
                     else if (GameCanvas.panel.type == 13)
                     {
                         myVector.addElement(new Command(mResources.use_for_trade, this, 7000, currItem));
+                        if (currItem.quantity > 1)
+                        {
+                            myVector.addElement(new Command(HResources.trade_all, HMenu.gI(), 10001, currItem));
+                        }
                     }
                     else if (item.isTypeBody())
                     {
